@@ -10,4 +10,3 @@ data class Flight(
     val price: String,
     val meal: String
 )
-
