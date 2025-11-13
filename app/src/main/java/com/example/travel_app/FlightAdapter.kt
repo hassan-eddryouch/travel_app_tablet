@@ -1,50 +1,57 @@
 package com.example.travel_app
 
-import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travel_app.databinding.ItemFightBinding
 
-class FlightAdapter(
-    private val flights: List<Flight>
-    // SUPPRIMÉ : ViewModel n'est plus passé ici
-    // private val viewModel: FlightViewModel
-) : RecyclerView.Adapter<FlightAdapter.FlightViewHolder>() {
+class FlightsAdapter(
+    private val flights: List<Flight>,
+    private val listener: OnFlightClickListener
+) : RecyclerView.Adapter<FlightsAdapter.ViewHolder>() {
 
-    inner class FlightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvAirlineName: TextView = itemView.findViewById(R.id.tvAirlineName)
-        val tvDepartureCode: TextView = itemView.findViewById(R.id.tvDepartureCode)
-        val tvDepartureTime: TextView = itemView.findViewById(R.id.tvDepartureTime)
-        val tvArrivalCode: TextView = itemView.findViewById(R.id.tvArrivalCode)
-        val tvArrivalTime: TextView = itemView.findViewById(R.id.tvArrivalTime)
-        val tvDuration: TextView = itemView.findViewById(R.id.tvDuration)
-        val tvPrice: TextView = itemView.findViewById(R.id.tvPrice)
-        val tvMeal: TextView = itemView.findViewById(R.id.tvMeal)
-        val imgPriceTag: ImageView = itemView.findViewById(R.id.imgPriceTag)
+    interface OnFlightClickListener {
+        fun onFlightClick(flight: Flight)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlightViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_fight, parent, false)
-        return FlightViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = ItemFightBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FlightViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val flight = flights[position]
-        holder.tvAirlineName.text = flight.airlineName
-        holder.tvDepartureCode.text = flight.departureCode
-        holder.tvDepartureTime.text = flight.departureTime
-        holder.tvArrivalCode.text = flight.arrivalCode
-        holder.tvArrivalTime.text = flight.arrivalTime
-        holder.tvDuration.text = flight.duration
-        holder.tvPrice.text = flight.price
-        holder.tvMeal.text = flight.meal
-        holder.imgPriceTag.setImageResource(R.drawable.ic_rupee)
-
+        holder.bind(flight)
     }
 
-    override fun getItemCount(): Int = flights.size
+    override fun getItemCount() = flights.size
+
+    inner class ViewHolder(private val binding: ItemFightBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onFlightClick(flights[position])
+                }
+            }
+        }
+
+        fun bind(flight: Flight) {
+            binding.ivAirlineIcon?.setImageResource(flight.airlineIconResId)
+            binding.tvAirlineName.text = flight.airlineName
+            binding.tvDepartureCode.text = flight.departureCode
+            binding.tvDepartureTime.text = flight.departureTime
+            binding.tvArrivalCode.text = flight.arrivalCode
+            binding.tvArrivalTime.text = flight.arrivalTime
+            binding.tvDuration.text = flight.duration
+            binding.tvPrice.text = flight.price
+            binding.tvMeal.text = flight.mealInfo
+        }
+    }
 }
