@@ -7,17 +7,25 @@ L'application affiche une liste de vols disponibles sur le côté gauche de l'é
 
 **Interface Maître-Détail :** L'écran principal est divisé en deux panneaux...
 ![Interface Maître-Détail de l'application]
-<img alt="interface acceil" src="screenshots/Acceil.png" width="100" heigth="100">
+
+<img alt="interface acceil" src="screenshots/Acceil.png" width="300" heigth="300">
+
 **Liste des vols :** Un `RecyclerView` affiche une liste verticale des vols...
+
 ![Liste des vols dans l'application]
-<img alt="Interface Maître-Détail" src="screenshots/list_vols.png" width="100" heigth="100">
+
+<img alt="Interface Maître-Détail" src="screenshots/list_vols.png" width="300" heigth="300">
+
 **Panneau de détails dynamique :** Le panneau de droite est un `Fragment`...
+
 ![Panneau de détails du fragment]
-<img alt="Interface Maître-Détail" src="screenshots/Panneau_fragement.png" width="100" heigth="100">
+
+<img alt="Interface Maître-Détail" src="screenshots/Panneau_fragement.png" width="300" heigth="300">
+
 🛠️ Technologies et Concepts Démontrés
 Langage : Kotlin
 
-<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="100" heigth="100">
+<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="300" heigth="300">
 
 Architecture : Interface Maître-Détail (Liste-Détail)
 
