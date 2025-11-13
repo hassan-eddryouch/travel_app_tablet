@@ -5,19 +5,14 @@ L'application affiche une liste de vols disponibles sur le côté gauche de l'é
 
 ## ✨ Fonctionnalités
 
-**Interface Maître-Détail :** L'écran principal est divisé en deux panneaux, ce qui est idéal pour l'orientation paysage des tablettes.
+**Interface Maître-Détail :** L'écran principal est divisé en deux panneaux...
+![Interface Maître-Détail de l'application](screenshots/Acceil.png)
 
-![Interface Maître-Détail de l'application](app\src\main\res\screenshots\Acceil.png)
+**Liste des vols :** Un `RecyclerView` affiche une liste verticale des vols...
+![Liste des vols dans l'application](screenshots/list_vols.png)
 
-**Liste des vols :** Un `RecyclerView` affiche une liste verticale des vols disponibles, chacun dans sa propre `CardView`.
-
-![Liste des vols dans l'application](app\src\main\res\screenshots\list_vols.png)
-
-**Panneau de détails dynamique :** Le panneau de droite est un `Fragment` qui se met à jour pour afficher les informations du vol qui a été cliqué.
-
-![Liste des vols dans l'application](app\src\main\res\screenshots\Panneau_fragement.png)
-
-**Données objets :** Utilise une `data class` Kotlin (`Flight.kt`) avec `@Parcelize` pour transférer facilement les données du vol vers le fragment de détails.
+**Panneau de détails dynamique :** Le panneau de droite est un `Fragment`...
+![Panneau de détails du fragment](screenshots/Panneau_fragement.png)
 
 🛠️ Technologies et Concepts Démontrés
 Langage : Kotlin
