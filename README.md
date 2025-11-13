@@ -25,7 +25,7 @@ L'application affiche une liste de vols disponibles sur le côté gauche de l'é
 🛠️ Technologies et Concepts Démontrés
 Langage : Kotlin
 
-<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="200" heigth="200">
+<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="180" heigth="180">
 
 Architecture : Interface Maître-Détail (Liste-Détail)
 
