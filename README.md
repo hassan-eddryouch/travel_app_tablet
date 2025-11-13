@@ -27,27 +27,10 @@ Langage : Kotlin
 
 <img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="180" heigth="180">
 
-Architecture : Interface Maître-Détail (Liste-Détail)
+Enverenment : Android Studio
 
-Composants de l'interface utilisateur (UI) :
+<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/128px-Android_Studio_icon_%282023%29.svg.png?20230919062400" width="180" heigth="180">
 
-RecyclerView avec un Adapter et un ViewHolder personnalisés.
-
-Fragment pour afficher le contenu dynamique.
-
-FragmentTransaction pour remplacer le fragment de détails.
-
-CardView pour une interface utilisateur moderne et épurée.
-
-LinearLayout et ConstraintLayout pour la mise en page.
-
-Liaison de données :
-
-ViewBinding pour lier en toute sécurité les vues XML au code Kotlin.
-
-Gestion des données :
-
-@Parcelize pour une sérialisation efficace des objets de données.
 
 📂 Structure du Projet
 Voici les fichiers clés de ce projet et leur rôle :
