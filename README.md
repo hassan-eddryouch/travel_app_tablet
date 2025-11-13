@@ -6,16 +6,21 @@ L'application affiche une liste de vols disponibles sur le côté gauche de l'é
 ## ✨ Fonctionnalités
 
 **Interface Maître-Détail :** L'écran principal est divisé en deux panneaux...
-![Interface Maître-Détail de l'application](screenshots/Acceil.png)
+![Interface Maître-Détail de l'application]
+(screenshots/Acceil.png)
 
 **Liste des vols :** Un `RecyclerView` affiche une liste verticale des vols...
-![Liste des vols dans l'application](screenshots/list_vols.png)
+![Liste des vols dans l'application]
+(screenshots/list_vols.png)
 
 **Panneau de détails dynamique :** Le panneau de droite est un `Fragment`...
-![Panneau de détails du fragment](screenshots/Panneau_fragement.png)
+![Panneau de détails du fragment]
+(screenshots/Panneau_fragement.png)
 
 🛠️ Technologies et Concepts Démontrés
 Langage : Kotlin
+
+<img alt="Interface Maître-Détail" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kotlin_icon_%282021-present%29.svg" width="600">
 
 Architecture : Interface Maître-Détail (Liste-Détail)
 
